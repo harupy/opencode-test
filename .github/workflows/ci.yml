@@ -25,7 +25,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          codex exec --profile config.toml --full-auto "hello"
+          codex exec --config config.toml --full-auto "hello"
 
       - name: Call AI model
         env:
