@@ -25,7 +25,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          opencode run --model openai/gpt-4.1 'hello'
+          opencode run --print-logs --model openai/gpt-4.1 'hello'
 
       - name: Call AI model
         env:
