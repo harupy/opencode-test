@@ -26,7 +26,7 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.GITHUB_TOKEN }}
           OPENAI_BASE_URL: "https://models.github.ai/inference"
         run: |
-          codex "explain this codebase to me"
+          codex --full-auto "hello"
 
       - name: Call AI model
         env:
