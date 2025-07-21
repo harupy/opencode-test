@@ -24,9 +24,8 @@ jobs:
       - name: test
         env:
           OPENAI_API_KEY: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_BASE_URL: "https://models.github.ai/inference"
         run: |
-          codex exec --full-auto "hello"
+          codex exec --profile config.toml --full-auto "hello"
 
       - name: Call AI model
         env:
