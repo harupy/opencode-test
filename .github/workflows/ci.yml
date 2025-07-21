@@ -24,7 +24,6 @@ jobs:
       - name: test
         env:
           OPENAI_API_KEY: ${{ secrets.GITHUB_TOKEN }}
-          OPENAI_API_BASE: https://models.github.ai/inference
         run: |
           opencode run --model openai/gpt-4.1 'hello'
 
