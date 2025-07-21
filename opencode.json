@@ -4,9 +4,6 @@
     "openai": {
       "options": {
         "baseURL": "https://models.github.ai/inference/"
-      },
-      "models": {
-        "gpt-4.1": {}
       }
     }
   }
