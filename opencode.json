@@ -3,7 +3,7 @@
   "provider": {
     "openai": {
       "options": {
-        "baseURL": "https://models.github.ai/inference"
+        "baseURL": "https://models.github.ai/inference/"
       },
       "models": {
         "gpt-4.1": {}
