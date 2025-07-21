@@ -21,6 +21,13 @@ jobs:
       - run: |
           opencode --version
 
+      - name: test
+        env:
+          OPENAI_API_KEY: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_BASE: https://models.github.ai/inference
+        run: |
+          opencode run --model openai/gpt-4.1 'hello'
+
       - name: Call AI model
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
