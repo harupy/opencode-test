@@ -25,6 +25,7 @@ jobs:
         env:
           OPENAI_API_KEY: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          mkdir -p ~/.codex
           cp config.toml ~/.codex/config.toml
           codex exec --full-auto "hello"
 
