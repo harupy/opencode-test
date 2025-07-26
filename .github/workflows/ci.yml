@@ -27,7 +27,7 @@ jobs:
         run: |
           mkdir -p ~/.codex
           cp config.toml ~/.codex/config.toml
-          codex exec --full-auto "hello"
+          codex exec --full-auto "Summarize this repository."
 
       - name: Call AI model
         env:
