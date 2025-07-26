@@ -6,6 +6,7 @@ on:
 
 permissions:
   contents: read
+  issues: write
   models: read
 
 jobs:
@@ -26,8 +27,10 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p ~/.codex
+          # Replace `__GITHUB_PERSONAL_ACCESS_TOKEN__` with the actual token
+          sed -i 's/__GITHUB_PERSONAL_ACCESS_TOKEN__/${{ secrets.GITHUB_TOKEN }}/g' config.toml
           cp config.toml ~/.codex/config.toml
-          codex exec --full-auto "Summarize this repository."
+          codex exec --full-auto "List issues in this repository."
 
       - name: Call AI model
         env:

@@ -6,3 +6,15 @@ name = "GitHub"
 env_key = "OPENAI_API_KEY"
 base_url = "https://models.github.ai/inference"
 wire_api = "chat"
+
+[mcp_servers.server-name]
+command = "docker"
+args = [
+    "run",
+    "-i",
+    "--rm",
+    "-e",
+    "GITHUB_PERSONAL_ACCESS_TOKEN",
+    "ghcr.io/github/github-mcp-server",
+]
+env = { "GITHUB_PERSONAL_ACCESS_TOKEN" = "__GITHUB_PERSONAL_ACCESS_TOKEN__" }
